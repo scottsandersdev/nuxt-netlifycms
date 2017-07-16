@@ -1,0 +1,8 @@
+@mixin border-styles {
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: height;
+  width: 100%;
+}

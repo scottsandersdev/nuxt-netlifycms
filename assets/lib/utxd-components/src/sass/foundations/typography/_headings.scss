@@ -1,0 +1,79 @@
+@import '../colors/index';
+@import '../../utils/breakpoints';
+
+@mixin heading-base {
+  color: $black;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+h1,
+.h1 {
+  @include heading-base;
+  @include from-breakpoint(lg) {
+    font-size: 84px;
+    letter-spacing: -1.6px;
+    line-height: 1.05;
+  }
+
+  font-size: 40px;
+  letter-spacing: -.6px;
+  line-height: 1.1;
+}
+
+h2,
+.h2 {
+  @include heading-base;
+  @include from-breakpoint(lg) {
+    font-size: 56px;
+    letter-spacing: -1.6px;
+    line-height: 1.07;
+  }
+
+  font-size: 40px;
+  letter-spacing: -.6px;
+  line-height: 1.1;
+}
+
+h3,
+.h3 {
+  @include heading-base;
+  @include from-breakpoint(lg) {
+    font-size: 40px;
+    letter-spacing: -.6px;
+    line-height: 1.2;
+  }
+
+  font-size: 32px;
+  letter-spacing: -.15px;
+  line-height: 1.25;
+}
+
+h4,
+.h4 {
+  @include heading-base;
+  @include from-breakpoint(lg) {
+    letter-spacing: -.6px;
+  }
+
+  font-size: 32px;
+  letter-spacing: -.15px;
+  line-height: 1.25;
+}
+
+h5,
+.h5 {
+  @include heading-base;
+
+  font-size: 24px;
+  letter-spacing: -.15px;
+  line-height: 1.33;
+}
+
+.h1--inverted,
+.h2--inverted,
+.h3--inverted,
+.h4--inverted,
+.h5--inverted {
+  color: $white;
+}

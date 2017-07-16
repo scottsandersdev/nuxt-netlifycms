@@ -1,0 +1,32 @@
+@mixin list-parent-styles {
+  border-collapse: collapse;
+  display: table;
+  list-style: none;
+  margin: 0 0 15px;
+  padding: 0;
+
+  li > & {
+    margin-bottom: 0;
+  }
+}
+
+@mixin list-item-styles {
+  border-top: 15px solid transparent;
+  display: table-row;
+  width: 100%;
+
+  &::before {
+    color: $blue-500;
+    display: table-cell;
+    left: 0;
+    padding-right: 16px;
+    width: 15px;
+  }
+}
+
+@mixin list-item-icon {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  width: 40px;
+}

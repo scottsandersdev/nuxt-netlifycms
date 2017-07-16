@@ -1,0 +1,8 @@
+@import '../../../../sass/foundations/colors/index';
+
+$color-active: $blue-brand;
+$color-inactive: $grey-400;
+$border-radius: 6px;
+$border-width: 1px;
+$border-default: $border-width solid $color-inactive;
+$border-active: $border-width solid $color-active;

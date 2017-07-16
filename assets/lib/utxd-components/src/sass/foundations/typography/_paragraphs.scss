@@ -1,0 +1,29 @@
+@import '../../global/variables';
+@import '../colors/index';
+
+p {
+  margin: 0 0 16px;
+}
+
+.paragraph--lead {
+  @include from-breakpoint(lg) {
+    font-size: 24px;
+    letter-spacing: .8px;
+    line-height: 1.5;
+  }
+
+  font-size: $base-font-size;
+  letter-spacing: .5px;
+  line-height: 1.75;
+}
+
+small,
+.paragraph--legal {
+  font-size: 12px;
+  letter-spacing: .6px;
+  line-height: 2;
+}
+
+.paragraph--inverted {
+  color: $white;
+}

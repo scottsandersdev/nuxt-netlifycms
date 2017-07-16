@@ -1,0 +1,32 @@
+.notification {
+  align-items: center;
+  display: flex;
+  line-height: 1.5;
+  padding: 24px;
+}
+
+.notification--branded {
+  background-color: $blue-100;
+}
+
+.notification--sos {
+  background-color: $red-100;
+}
+
+.notification__icon {
+  align-self: flex-start;
+  flex-shrink: 0;
+  height: 1.375em;
+  margin-right: 12px;
+  margin-top: 1px;
+  width: 1.375em;
+
+  .notification--branded & {
+    fill: $blue-500;
+  }
+
+  .notification--sos & {
+    fill: $red-200;
+  }
+}
+

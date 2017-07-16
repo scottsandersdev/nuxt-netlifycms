@@ -1,0 +1,10 @@
+@import '../lib/utxd-components/src/sass/utxd-components';
+
+.test-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}

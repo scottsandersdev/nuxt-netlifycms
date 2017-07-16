@@ -1,0 +1,30 @@
+// License tracking URL for fonts.com
+@import url('https://fast.fonts.net/t/1.css?apiType=css&projectid=6b54dc14-8cc0-4915-baa1-1f86f3d26d3f');
+
+@font-face {
+  font-family: 'Neue Helvetica';
+  src: url('#{$fonts-path}/5a13f7d1-b615-418e-bc3a-525001b9a671.woff2') format('woff2'), url('#{$fonts-path}/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Helvetica';
+  src: url('#{$fonts-path}/09f28057-e848-49b3-94bf-bfaefff51b64.woff2') format('woff2'), url('#{$fonts-path}/8e9ee02b-f337-4f13-ad6c-969d6d6536c8.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Helvetica';
+  src: url('#{$fonts-path}/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2') format('woff2'), url('#{$fonts-path}/14ff6081-326d-4dae-b778-d7afa66166fc.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Helvetica';
+  src: url('#{$fonts-path}/d73c0f40-68f5-479e-9170-34a47382ed7a.woff2') format('woff2'), url('#{$fonts-path}/628a0837-f9e0-4b32-83c4-d99689b9da93.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}

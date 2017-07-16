@@ -1,0 +1,53 @@
+@import '../colors/index';
+@import '../typography/variables';
+
+.icon {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  width: 30px;
+
+  .inline-cta & {
+    fill: $link-color;
+    height: .68em;
+    margin-left: .25em;
+    width: .68em;
+  }
+
+  .inline-cta--left & {
+    margin: 0 .25em 0 0;
+  }
+
+  .link--inverted &,
+  .paragraph--inverted & {
+    fill: $white;
+  }
+}
+
+.icon--alert {
+  fill: $red-500;
+}
+
+.icon--blue-brand {
+  fill: $blue-brand;
+}
+
+.icon--caution {
+  fill: $orange-500;
+}
+
+.icon--inactive {
+  fill: $grey-600;
+}
+
+.icon--inverted {
+  fill: $white;
+}
+
+.icon--steel-blue-brand {
+  fill: $steel-blue-brand;
+}
+
+.icon--success {
+  fill: $yellow-green-500;
+}

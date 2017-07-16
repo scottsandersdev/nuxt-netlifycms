@@ -1,0 +1,27 @@
+ol {
+  @include list-parent-styles;
+  counter-reset: item;
+
+  > li {
+    @include list-item-styles;
+
+    &::before {
+      content: counter(item) '.';
+      counter-increment: item;
+    }
+  }
+}
+
+ul {
+  @include list-parent-styles;
+
+  > li {
+    @include list-item-styles;
+
+    &::before {
+      content: '\2022';
+      font-size: 12px;
+      top: 3px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../global/variables';
+@import '../colors/index';
+
+body {
+  color: $grey-700;
+  font-family: 'Neue Helvetica', Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
+  letter-spacing: .5px;
+  line-height: 1.75;
+}

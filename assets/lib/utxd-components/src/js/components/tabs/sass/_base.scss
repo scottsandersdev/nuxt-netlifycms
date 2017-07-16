@@ -1,0 +1,91 @@
+@import '../../../../sass/foundations/colors/index';
+@import '../../../../sass/global/variables';
+@import '../../../../sass/utils/breakpoints';
+
+utxd-tabs {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.tabs__header {
+  border-bottom: $border-active;
+  display: flex;
+  list-style: none;
+  margin: 30px 0;
+  padding: 0 30px;
+}
+
+.tabs__tab-item {
+  @include from-breakpoint(lg) {
+    padding: 16px 20px;
+  }
+
+  background: $white;
+  border-top: $border-default;
+  color: $grey-600;
+  cursor: default;
+  display: inline-block;
+  font-weight: 600;
+  padding: 25px 20px;
+  text-align: center;
+  transition: border-color $hover-duration, box-shadow $hover-duration, color $hover-duration;
+  vertical-align: middle;
+  width: auto;
+
+  &:not(.tabs__tab-item--active) {
+    border-left: $border-default;
+    cursor: pointer;
+
+    &:last-child {
+      border-right: $border-default;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-active;
+    }
+  }
+
+  .tabs__tab-item--active + & {
+    border-left: 0;
+  }
+
+  &:first-child {
+    border-top-left-radius: $border-radius;
+  }
+
+  &:last-child {
+    border-top-right-radius: $border-radius;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
+.tabs__tab-item--active {
+  border-left: $border-active;
+  border-right: $border-active;
+  border-top: $border-active;
+  box-shadow: inset 0 4px 0 0 $color-active;
+  color: $color-active;
+  position: relative;
+
+  &::after {
+    background: $white;
+    bottom: #{$border-width * -1};
+    content: '';
+    height: $border-width;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.tabs__tab-content {
+  display: none;
+}
+
+.tabs__tab-content--active {
+  display: block;
+}

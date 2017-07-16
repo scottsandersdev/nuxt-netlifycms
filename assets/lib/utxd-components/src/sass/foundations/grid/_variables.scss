@@ -1,0 +1,15 @@
+$md: 600px !default;
+$lg: 1000px !default;
+
+$breakpoints: (
+  sm: (0, $md - 1),
+  md: ($md, $lg - 1),
+  lg: ($lg, null)
+);
+
+$grid-columns: 12 !default;
+$grid-gutters-sm: 20px !default;
+$grid-gutters-md-lg: 30px !default;
+$half-grid-gutters-sm: $grid-gutters-sm / 2;
+$half-grid-gutters-md-lg: $grid-gutters-md-lg / 2;
+$max-width: 1440px !default;

@@ -1,0 +1,28 @@
+@import '../../../../sass/foundations/colors/index';
+
+.date-picker {
+  position: relative;
+}
+
+.date-picker__arrow {
+  border-bottom: 8px solid $grey-400;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  height: 0;
+  position: absolute;
+  right: 18px;
+  top: -8px;
+  width: 0;
+
+  &::after {
+    border-bottom: 8px solid $white;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    content: '';
+    height: 0;
+    left: -16px;
+    position: absolute;
+    top: 1px;
+    width: 0;
+  }
+}

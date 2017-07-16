@@ -1,0 +1,140 @@
+@import '../../../../sass/foundations/colors/index';
+
+utxd-collapsible {
+  // sass-lint:disable-block nesting-depth
+  display: block;
+  margin-bottom: 32px;
+
+  + utxd-collapsible  {
+    margin-top: -32px;
+
+    .collapsible {
+      &::before {
+        top: -1px;
+      }
+    }
+
+    .collapsible__toggle {
+      &::before {
+        top: -1px;
+      }
+
+      .collapsible--expanded & {
+        top: -2px;
+      }
+    }
+
+    .collapsible__content {
+      &::before {
+        top: 0;
+      }
+    }
+  }
+}
+
+.collapsible {
+  position: relative;
+
+  &::after,
+  &::before {
+    @include border-styles;
+
+    background: $grey-300;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+}
+
+.collapsible--expanded {
+  &::after,
+  &::before {
+    height: 2px;
+  }
+}
+
+.collapsible__toggle {
+  color: $grey-700;
+  font-weight: bold;
+  line-height: 1.75;
+  outline: 0;
+  padding: ($padding-vertical - 2px) 0 $padding-vertical;
+  text-align: left;
+  width: 100%;
+
+  &::after,
+  &::before {
+    @include border-styles;
+
+    background: transparent;
+    z-index: 1;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &:focus {
+    &::after,
+    &::before {
+      background: $blue-brand;
+    }
+  }
+
+  .collapsible--expanded & {
+    &:focus {
+      &::after,
+      &::before {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.collapsible__icon {
+  fill: $blue-brand;
+  height: 18px;
+  position: absolute;
+  right: 0;
+  top: $padding-vertical;
+  transform: rotate(-90deg);
+  transition: transform $duration;
+  width: 18px;
+
+  .collapsible--expanded & {
+    transform: rotate(90deg);
+  }
+}
+
+.collapsible__content {
+  height: 0;
+  overflow: hidden;
+
+  > div {
+    padding-bottom: $padding-vertical;
+  }
+
+  &::before {
+    @include border-styles;
+
+    height: 0;
+    top: 2px;
+    transition: background $duration, height $duration;
+  }
+
+  .collapsible--expanded & {
+    &::before {
+      background: $grey-200;
+      height: 2px;
+    }
+  }
+}

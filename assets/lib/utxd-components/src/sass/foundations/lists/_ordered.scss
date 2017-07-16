@@ -1,0 +1,39 @@
+.ol--decimal-leading-zero {
+  > li {
+    &::before {
+      content: counter(item, decimal-leading-zero)'.';
+    }
+  }
+}
+
+.ol--lower-alpha {
+  > li {
+    &::before {
+      content: counter(item, lower-alpha)'.';
+    }
+  }
+}
+
+.ol--lower-roman {
+  > li {
+    &::before {
+      content: counter(item, lower-roman)'.';
+    }
+  }
+}
+
+.ol--upper-alpha {
+  > li {
+    &::before {
+      content: counter(item, upper-alpha)'.';
+    }
+  }
+}
+
+.ol--upper-roman {
+  > li {
+    &::before {
+      content: counter(item, upper-roman)'.';
+    }
+  }
+}

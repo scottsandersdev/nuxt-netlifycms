@@ -1,0 +1,61 @@
+@import '../../../../sass/foundations/colors/index';
+
+.date-picker-calendar {
+  display: table;
+  width: 100%;
+}
+
+.date-picker-calendar__header-week {
+  display: table-header-group;
+}
+
+.date-picker-calendar__header-day {
+  display: table-cell;
+  font-size: 13px;
+  padding: 15px 0;
+  text-align: center;
+  width: percentage(1/7);
+}
+
+.date-picker-calendar__week {
+  display: table-row;
+}
+
+.date-picker-calendar__day {
+  display: table-cell;
+  width: percentage(1/7);
+}
+
+.date-picker-calendar__day-button {
+  font-size: 13px;
+  outline: 0;
+  padding: 9px 5px;
+  position: relative;
+  width: 100%;
+}
+
+.date-picker-calendar__day-button-inner {
+  display: block;
+  height: 30px;
+  line-height: 1.3;
+  padding-top: 7px;
+  width: 100%;
+}
+
+.date-picker-calendar__day-button-inner--current {
+  color: $white;
+  position: relative;
+
+  &::after {
+    background: $blue-brand;
+    border-radius: 50%;
+    content: '';
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../foundations/colors/index';
+
+select {
+  @include text-input-select-styles;
+
+  @include from-breakpoint(md) {
+    height: $input-height-lg;
+  }
+
+  appearance: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$blue-brand}' viewBox='-227 157 48 48'%3E%3Cpath d='M-179 167h-48l24 28 24-28z'/%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  background-position: calc(100% - 24px) 50%;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  color: $grey-600;
+  cursor: pointer;
+  display: block;
+  height: $input-height-sm;
+  padding: 0 24px;
+  position: relative;
+
+  &::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
+    display: none;
+  }
+
+  &:disabled {
+    @include input-disabled-styles;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$grey-600}' viewBox='-227 157 48 48'%3E%3Cpath d='M-179 167h-48l24 28 24-28z'/%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    cursor: default;
+  }
+
+  &.select--error {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$red-500}' viewBox='-227 157 48 48'%3E%3Cpath d='M-179 167h-48l24 28 24-28z'/%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    border: 1px solid $red-500;
+
+    &:focus {
+      box-shadow: 0 4px $red-shadow;
+    }
+  }
+}

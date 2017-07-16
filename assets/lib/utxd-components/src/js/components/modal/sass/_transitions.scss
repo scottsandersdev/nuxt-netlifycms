@@ -1,0 +1,9 @@
+.modal__content-enter-active,
+.modal__content-leave-active {
+  transition: opacity .3s ease;
+}
+
+.modal__content-enter,
+.modal__content-leave-to {
+  opacity: 0;
+}

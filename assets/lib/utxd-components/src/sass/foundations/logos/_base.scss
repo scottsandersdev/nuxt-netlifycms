@@ -1,0 +1,25 @@
+@import '../colors/index';
+
+.logo {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  width: 125px;
+
+  .link--inverted &,
+  .paragraph--inverted & {
+    fill: $white;
+  }
+}
+
+.logo--blue-brand {
+  fill: $blue-brand;
+}
+
+.logo--steel-blue-brand {
+  fill: $steel-blue-brand;
+}
+
+.logo--inverted {
+  fill: $white;
+}

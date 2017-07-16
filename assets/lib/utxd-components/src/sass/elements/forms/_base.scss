@@ -1,0 +1,29 @@
+@import '../../global/variables';
+@import '../../foundations/colors/index';
+
+fieldset {
+  @include input-bottom-margin;
+
+  border: 0;
+  margin-left: 0;
+  padding: 0;
+}
+
+.field-wrapper {
+  &:last-of-type {
+    .label--radio,
+    .label--checkbox {
+      margin-bottom: 0;
+    }
+  }
+}
+
+label {
+  color: $grey-700;
+  display: inline-block;
+  font-size: $base-font-size;
+  font-weight: bold;
+  letter-spacing: .5px;
+  line-height: 1.5;
+  margin-bottom: .625em;
+}

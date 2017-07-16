@@ -1,0 +1,35 @@
+.examples {
+  padding: 40px 0;
+}
+
+.navy-bg {
+  background: #262c43;
+  padding: 20px 40px;
+}
+
+.col--docs {
+  align-items: center;
+  background-color: rgba(41, 75, 105, .1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-height: 40px;
+  position: relative;
+}
+
+.col--docs-tall {
+  height: 100px;
+}
+
+.svg-sprite {
+  display: none;
+}
+
+.icon-label {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.icon-label--inverted {
+  color: #fff;
+}

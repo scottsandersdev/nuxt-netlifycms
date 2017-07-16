@@ -1,0 +1,131 @@
+@import '../../foundations/colors/index';
+@import '../../global/variables';
+
+input {
+  &[type='password'],
+  &[type='search'],
+  &[type='text'] {
+    @include text-input-select-styles;
+
+    @include from-breakpoint(md) {
+      height: $input-height-lg;
+    }
+
+    appearance: none;
+    display: block;
+    height: $input-height-sm;
+    padding: 0 24px;
+    transition: box-shadow $hover-duration;
+
+    &::placeholder {
+      color: $grey-600;
+    }
+
+    &.input-with-icon__input {
+      @include from-breakpoint(md) {
+        padding-right: $input-height-lg + 10px;
+      }
+
+      margin-bottom: 0;
+      padding-right: $input-height-sm;
+    }
+
+    &.input--error {
+      border: 1px solid $red-500;
+
+      &:focus {
+        box-shadow: 0 4px $red-shadow;
+      }
+    }
+  }
+}
+
+textarea {
+  @include text-input-select-styles;
+
+  @include from-breakpoint(md) {
+    padding: 10px 24px;
+  }
+
+  appearance: none;
+  display: block;
+  height: 134px;
+  line-height: 1.75;
+  padding: 16px 24px;
+  transition: box-shadow $hover-duration;
+
+  &.textarea--error {
+    border: 1px solid $red-500;
+
+    &:focus {
+      box-shadow: 0 4px $red-shadow;
+    }
+  }
+}
+
+.input-with-icon {
+  @include from-breakpoint(md) {
+    max-width: $input-max-width;
+  }
+
+  @include input-bottom-margin;
+
+  display: table;
+  position: relative;
+  width: 100%;
+}
+
+.input-with-icon__button {
+  @include from-breakpoint(md) {
+    height: $input-height-lg;
+    width: $input-height-lg + 10px;
+  }
+
+  height: $input-height-sm;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $input-height-sm;
+}
+
+.input-with-icon__icon {
+  @include from-breakpoint(md) {
+    top: ($input-height-lg - $input-icon-size) / 2;
+  }
+
+  fill: $blue-brand;
+  height: $input-icon-size;
+  position: absolute;
+  right: $input-icon-size;
+  top: ($input-height-sm - $input-icon-size) / 2;
+  width: $input-icon-size;
+
+  :disabled & {
+    fill: $grey-600;
+  }
+}
+
+.input-with-icon__icon--alert {
+  fill: $red-500;
+}
+
+.input-error-msg {
+  @include from-breakpoint(md) {
+    margin: -47px 0 19px;
+  }
+
+  color: $red-500;
+  display: block;
+  margin: -25px 0 25px;
+
+  &.input-error-msg--inline {
+    display: inline;
+    margin-left: 16px;
+  }
+}
+
+.input-error-icon {
+  height: 16px;
+  margin: -4px 4px 0 0;
+  width: 16px;
+}

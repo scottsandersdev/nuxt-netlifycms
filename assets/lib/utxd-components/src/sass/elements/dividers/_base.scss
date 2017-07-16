@@ -1,0 +1,15 @@
+@import '../../foundations/colors/index';
+
+hr {
+  border-bottom-width: 0;
+  border-top: 1px solid $grey-400;
+  margin: 32px 0;
+}
+
+.hr--sos {
+  border-top: 1px solid $red-500;
+}
+
+.hr--active {
+  border-top: 1px solid $blue-brand;
+}

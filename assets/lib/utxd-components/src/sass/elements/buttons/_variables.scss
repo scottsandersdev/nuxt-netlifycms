@@ -1,0 +1,12 @@
+@import '../../foundations/colors/index';
+@import '../../global/variables';
+
+$button-padding-sm: 20px;
+$button-padding-lg: 12px;
+$button-margin-right: 32px;
+
+$button-color-bg: $blue-brand;
+$button-color-text: $white;
+$button-color-hover: $blue-700;
+$button-color-disabled-bg: $grey-300;
+$button-color-disabled-text: $grey-600;

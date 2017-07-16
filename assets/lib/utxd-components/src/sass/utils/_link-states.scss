@@ -1,0 +1,11 @@
+// Apply declarations to all link states and base class.
+@mixin link-states {
+  @content;
+
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
+    @content;
+  }
+}

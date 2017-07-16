@@ -1,0 +1,32 @@
+// sass-lint:disable nesting-depth
+
+@import '../../foundations/colors/index';
+
+input {
+  &[type='radio'] {
+    @include checkbox-radio-styles;
+
+    &:checked {
+      & + label {
+        &::before {
+          background: $blue-brand;
+          border-radius: 100%;
+          content: '';
+          height: 12px;
+          left: 6px;
+          position: absolute;
+          top: calc(50% - 6px);
+          width: 12px;
+        }
+      }
+    }
+  }
+}
+
+.label--radio {
+  @include checkbox-radio-label-styles;
+
+  &::after {
+    border-radius: 100%;
+  }
+}

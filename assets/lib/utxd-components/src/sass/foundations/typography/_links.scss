@@ -1,0 +1,34 @@
+@import '../colors/index';
+@import '../../utils/link-states';
+
+a {
+  @include link-states {
+    color: $link-color;
+  }
+
+  .paragraph--inverted & {
+    @include link-states {
+      color: $white;
+    }
+  }
+}
+
+.link--inverted {
+  @include link-states {
+    color: $white;
+  }
+}
+
+.inline-cta {
+  @include link-states {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inline-cta--heavy {
+  font-weight: bold;
+}

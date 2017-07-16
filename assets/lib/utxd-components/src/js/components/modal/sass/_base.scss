@@ -1,0 +1,90 @@
+@import '../../../../sass/foundations/colors/index';
+@import '../../../../sass/foundations/grid/variables';
+@import '../../../../sass/utils/breakpoints';
+
+.modal__content {
+  @include from-breakpoint(md) {
+    padding: 0 $grid-gutters-md-lg;
+  };
+
+  background-color: $modal-overlay;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal__content-inner {
+  @include from-breakpoint(md) {
+    border-radius: 6px;
+    height: auto;
+    margin: 15% auto 0;
+    min-height: inherit;
+  }
+
+  @include from-breakpoint(lg) {
+    margin: 10% auto 0;
+    max-width: 910px;
+    width: percentage(2/3);
+  }
+
+  background-color: $white;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal__content-inner--small {
+  @include from-breakpoint(md) {
+    max-width: 440px;
+    width: percentage(2/3);
+  }
+
+  @include from-breakpoint(lg) {
+    max-width: 440px;
+    width: percentage(1/3);
+  }
+}
+
+.modal__content-inner--medium {
+  @include from-breakpoint(lg) {
+    max-width: 676px;
+    width: 50%;
+  }
+}
+
+.modal__content-close-button {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+
+.modal__content-close-icon {
+  fill: $blue-500;
+  height: 48px;
+  padding: 16px;
+  width: 48px;
+}
+
+.modal__content-section {
+  @include from-breakpoint(md) {
+    padding: 32px 32px 16px;
+  }
+
+  padding: 32px 20px;
+}
+
+.modal__content-section +
+.modal__content-section {
+  border-top: 1px solid $grey-400;
+}
+
+.modal__content-header {
+  border-top: 0;
+}

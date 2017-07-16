@@ -1,0 +1,116 @@
+@import '../../global/variables';
+@import '../../foundations/colors/index';
+
+@mixin input-bottom-margin {
+  @include from-breakpoint(md) {
+    margin-bottom: 55px;
+  }
+
+  margin-bottom: 35px;
+}
+
+@mixin input-disabled-styles {
+  background-color: $grey-200;
+  border-color: $grey-400;
+  color: $grey-600;
+}
+
+@mixin form-element-focus-styles {
+  border: 1px solid $blue-brand;
+  box-shadow: 0 4px $blue-shadow;
+  outline: 0;
+}
+
+@mixin text-input-select-styles {
+  @include from-breakpoint(md) {
+    max-width: $input-max-width;
+  }
+
+  @include input-bottom-margin;
+
+  border: 1px solid $grey-400;
+  border-radius: 6px;
+  color: $grey-700;
+  font-family: 'Neue Helvetica', Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
+  letter-spacing: .5px;
+  width: 100%;
+
+  &:disabled {
+    @include input-disabled-styles;
+  }
+
+  &:focus {
+    @include form-element-focus-styles;
+  }
+}
+
+@mixin checkbox-radio-styles {
+  display: block;
+  opacity: 0;
+  position: absolute;
+
+  &:active,
+  &:focus {
+    &:not(:disabled) + label {
+      &::after {
+        @include form-element-focus-styles;
+      }
+    }
+  }
+
+  &:disabled {
+    & + label {
+      color: $grey-600;
+      cursor: default;
+
+      &::after {
+        background: $grey-200;
+      }
+    }
+  }
+
+  &.input--error {
+    & + label {
+      &::after {
+        border: 1px solid $red-500;
+      }
+    }
+
+    &:focus,
+    &:active {
+      & + label {
+        &::after {
+          border: 1px solid $red-500;
+          box-shadow: 0 4px $red-shadow;
+        }
+      }
+
+      &:not(:disabled) + label {
+        &::after {
+          border: 1px solid $red-500;
+          box-shadow: 0 4px $red-shadow;
+        }
+      }
+    }
+  }
+}
+
+@mixin checkbox-radio-label-styles {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 16px;
+  padding-left: 40px;
+  position: relative;
+
+  &::after {
+    border: 1px solid $grey-400;
+    content: '';
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
+}

@@ -1,0 +1,31 @@
+// sass-lint:disable nesting-depth
+
+@import '../../foundations/colors/index';
+
+input {
+  &[type='checkbox'] {
+    @include checkbox-radio-styles;
+
+    &:checked {
+      & + label {
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$blue-brand}' viewBox='-227 157 48 48'%3E%3Cpath d='M-212.6 195.2l-13.5-13.5 8.3-8.3 9.7 9.7 20.8-20.8 8.3 8.3-29.1 29.1c-.1 0-4.5-4.5-4.5-4.5z'/%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+          content: '';
+          height: 14px;
+          left: 5px;
+          position: absolute;
+          top: 5px;
+          width: 14px;
+        }
+      }
+    }
+  }
+}
+
+.label--checkbox {
+  @include checkbox-radio-label-styles;
+
+  &::after {
+    border-radius: 2px;
+  }
+}

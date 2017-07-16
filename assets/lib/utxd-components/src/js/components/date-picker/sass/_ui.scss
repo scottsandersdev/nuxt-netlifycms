@@ -1,0 +1,53 @@
+@import '../../../../sass/foundations/colors/index';
+@import '../../../../sass/utils/breakpoints';
+
+.date-picker__ui {
+  @include from-breakpoint(md) {
+    padding: 10px 25px;
+    top: 62px;
+  }
+
+  background: $white;
+  border: 1px solid $grey-400;
+  border-radius: 6px;
+  display: block;
+  max-width: 388px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 78px;
+  width: 100%;
+  z-index: 1;
+}
+
+.date-picker-controls {
+  align-items: center;
+  display: flex;
+}
+
+.date-picker-controls__button {
+  flex: 0 0 48px;
+  margin-bottom: 0;
+
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.date-picker-controls__button--prev {
+  order: 0;
+  text-align: right;
+}
+
+.date-picker-controls__button--next {
+  order: 2;
+  text-align: right;
+}
+
+.date-picker-controls__month {
+  flex: 1;
+  font-weight: bold;
+  order: 1;
+  text-align: center;
+}

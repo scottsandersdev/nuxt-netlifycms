@@ -1,0 +1,56 @@
+@import '../../utils/breakpoints';
+
+.container {
+  @include from-breakpoint(md) {
+    padding: 0 $grid-gutters-md-lg;
+  }
+
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 $grid-gutters-sm;
+  width: 100%;
+}
+
+.row {
+  @include from-breakpoint(md) {
+    margin-left: -$half-grid-gutters-md-lg;
+    margin-right: -$half-grid-gutters-md-lg;
+  }
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -$half-grid-gutters-sm;
+  margin-right: -$half-grid-gutters-sm;
+}
+
+.row--reverse {
+  flex-direction: row-reverse;
+}
+
+.col {
+  @include from-breakpoint(md) {
+    padding-left: $half-grid-gutters-md-lg;
+    padding-right: $half-grid-gutters-md-lg;
+  }
+
+  background-clip: content-box;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: $half-grid-gutters-sm;
+  padding-right: $half-grid-gutters-sm;
+}
+
+@include generate-columns;
+
+@each $name, $sizes in $breakpoints {
+  @if ($name != 'sm') {
+    $size: nth($sizes, 1);
+
+    @media only screen and (min-width: $size) {
+      @include generate-columns($name);
+    }
+  }
+}
