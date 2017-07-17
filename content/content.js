@@ -14,12 +14,7 @@ const content =
     },
     home: {
       title: 'Home',
-      sections: [
-        require('./home/our-work.md'),
-        require('./home/design-for-systems.md'),
-        require('./home/our-approach.md'),
-        require('./home/join-the-team.md')
-      ]
+      content: require('./home/our-work.md')
     }
   }
 
