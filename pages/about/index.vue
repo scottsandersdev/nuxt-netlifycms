@@ -1,6 +1,6 @@
 <template>
   <section class="test-container">
-    <div v-html="content.about.content"></div>
+  <div v-html="content.__content"></div>
   </section>
 </template>
 
@@ -10,7 +10,7 @@ import {mapState} from 'vuex'
 export default {
   computed: {
     ...mapState({
-      content: state => state.content
+      content: state => state.content.about.content
     })
   }
 }
