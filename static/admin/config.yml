@@ -2,7 +2,6 @@ backend:
   name: github
   repo: scottsandersdev/nuxt-netlifycms
   branch: master # Branch to update
-publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
@@ -18,3 +17,15 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Pull Quote", name: "quote", widget: "markdown"}
+      - {label: "Body 2", name: "body2", widget: "markdown"}
+  - name: "home" # Used in routes, e.g. /admin/collections/blog
+    label: "Home Page Sections" # Used in the UI
+    folder: "content/home" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template i.e. title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Section 1", name: "sec1", widget: "markdown"}
+      - {label: "Image", name: "thumbnail", widget: "image"}
+      - {label: "Section 2", name: "sec2", widget: "markdown"}
