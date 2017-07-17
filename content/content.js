@@ -10,7 +10,7 @@ const content =
     },
     articles: {
       title: 'Articles',
-      content: require('./articles.md')
+      content: require('./articles/test.md')
     },
     home: {
       title: 'Home',

@@ -1,3 +1,5 @@
+const articles = require('./content/articles.js');
+
 module.exports = {
   /*
   ** Headers of the page
@@ -19,6 +21,9 @@ module.exports = {
   css: [
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
+  generate: {
+    routes: articles
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -30,7 +35,7 @@ module.exports = {
     loaders: [
       {
         test: /\.md$/,
-        loaders: ['raw-loader', 'markdown-loader']
+        loaders: ['markdown-with-front-matter-loader']
       },
       {
         test: /\.svg$/,
