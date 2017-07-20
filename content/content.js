@@ -14,7 +14,7 @@ const content =
     },
     home: {
       title: 'Home',
-      content: require('./home/our-work.md')
+      content: require('./home/home.md')
     }
   }
 

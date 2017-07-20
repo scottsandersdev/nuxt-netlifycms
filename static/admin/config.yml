@@ -10,7 +10,7 @@ collections:
     folder: "content/articles" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template i.e. title.md
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -24,9 +24,18 @@ collections:
     folder: "content/home" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template i.e. title.md
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "text"}
       - {label: "Section 1", name: "sec1", widget: "markdown"}
-      - {label: "Image", name: "thumbnail", widget: "image"}
-      - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-      - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+      - {label: Careers,name: careers,widget: object,fields: [{label: Departments, name: departments, widget: list, fields: [{label: Heading,name: heading,widget: string},{label: Subheading,name: subheading, widget: text},{label: Positions, name: positions,widget: list,fields: [{label: Position,name: position, widget: string},{label: Link, name: link, widget: string}]}]}]}
+  - name: "careers" # Used in routes, e.g. /admin/collections/blog
+    label: "Careers" # Used in the UI
+    folder: "content/careers" # The path to the folder where the documents are stored
+    slug: "{{slug}}" # Filename template i.e. title.md
+    fields:
+      - {label: "Page Slug", name: "title", widget: "string"}
+      - {label: "Title", name: "pageTitle", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "text"}
+      - {label: "Hero Text", name: "heroText", widget: "text"}
+      - {label: Careers,name: careers,widget: object,fields: [{label: Departments, name: departments, widget: list, fields: [{label: Heading,name: heading,widget: string},{label: Subheading,name: subheading, widget: text},{label: Positions, name: positions,widget: list,fields: [{label: Position,name: position, widget: string},{label: Link, name: link, widget: string}]}]}]}

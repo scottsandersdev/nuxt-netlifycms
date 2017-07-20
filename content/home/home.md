@@ -1,12 +1,12 @@
 ---
-title: Careers
+title: Home
 pageTitle: Join the team.
 subtitle: >
   Our studio in Brooklyn is home to a growing team of digital problem solvers
-  excited about creating impact through technology. 
+  excited about creating impact through technology.
 heroText: >
   If you are a technologist, designer, data scientist, product manager or
-  engineer with a passion for building big, check out our openings. 
+  engineer with a passion for building big, check out our openings.
 careers:
   departments:
     - heading: Design
