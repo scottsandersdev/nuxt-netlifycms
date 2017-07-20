@@ -9,12 +9,22 @@ heroText: >
   engineer with a passion for building big, check out our openings.
 careers:
   departments:
-    - heading: Design
+    - title: Design
+      heading: Open Positions
       positions:
-        - position: 'General Manager, User Experience & Design'
-        - position: 'Director, Architecture'
-        - position: Cloud Architect
-        - position: 'Sr. Software Development Engineer, Back-End'
-        - position: Sr. Security Architect
-      subheading: Open Positions
+        - link: >-
+            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
+          title: 'General Manager, User Experience & Design'
+        - link: >-
+            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
+          title: 'Director, Architecture'
+        - link: >-
+            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
+          title: Cloud Architect
+        - link: >-
+            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
+          title: 'Sr. Software Development Engineer, Back-End'
+        - link: >-
+            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
+          title: Sr. Security Architect
 ---

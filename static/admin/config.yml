@@ -38,4 +38,4 @@ collections:
       - {label: "Title", name: "pageTitle", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "text"}
       - {label: "Hero Text", name: "heroText", widget: "text"}
-      - {label: Careers,name: careers,widget: object,fields: [{label: Departments, name: departments, widget: list, fields: [{label: Heading,name: heading,widget: string},{label: Subheading,name: subheading, widget: text},{label: Positions, name: positions,widget: list,fields: [{label: Position,name: position, widget: string},{label: Link, name: link, widget: string}]}]}]}
+      - {label: Careers,name: careers,widget: object,fields: [{label: Departments, name: departments, widget: list, fields: [{label: Title,name: title,widget: string},{label: Heading,name: heading, widget: text},{label: Positions, name: positions,widget: list,fields: [{label: Title,name: title, widget: string},{label: Link, name: link, widget: string}]}]}]}

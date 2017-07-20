@@ -2,7 +2,6 @@
   <div class="test-container">
     <nav>
       <nuxt-link class="link" to="/">Home</nuxt-link>
-      <nuxt-link class="link" to="/about">About</nuxt-link>
       <nuxt-link class="link" to="/careers">Careers</nuxt-link>
       <nuxt-link class="link" to="/articles">Articles</nuxt-link>
     </nav>
