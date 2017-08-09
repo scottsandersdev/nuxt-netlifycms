@@ -1,31 +1,20 @@
 ---
 title: Careers
-pageTitle: Join the team.
+pageTitle: Join up.
 subtitle: >
-  Our studio in Brooklyn is home to a growing team of digital problem solvers
-  excited about creating impact through technology.
+  Jobby jobs
 heroText: >
-  If you are a technologist, designer, data scientist, product manager or
-  engineer with a passion for building big, check out our openings.
+  Lorem Ipsum
 careers:
   departments:
-    - title: Design
+    - title: Dept
       heading: Open Positions
       positions:
         - link: >-
-            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
-          title: 'General Manager, User Experience & Design'
+            https://www.google.com
+          title: 'Googler'
         - link: >-
-            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
-          title: 'Director, Architecture'
-        - link: >-
-            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
-          title: Cloud Architect
-        - link: >-
-            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
-          title: 'Sr. Software Development Engineer, Back-End'
-        - link: >-
-            https://jobs.utc.com/job/brooklyn/general-manager-user-experience-and-design/1566/4292593
-          title: Sr. Security Architect
+            https://www.google.com
+          title: 'Googler'
 ---
 
